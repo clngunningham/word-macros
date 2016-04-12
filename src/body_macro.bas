@@ -71,4 +71,3 @@ Sub Macro1()
     End With
     Selection.ParagraphFormat.Alignment = wdAlignParagraphJustify
 End Sub
-
