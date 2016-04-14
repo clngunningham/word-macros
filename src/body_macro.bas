@@ -1,6 +1,10 @@
-Sub Macro1()
+' This macro automates formatting for a two column Word document.
+' It sets the margins to be 0.75" 1", 0.63", 0.63", the spacing to be 0, 0, 0, 6, 
+' the references to be Chicago, and the text Justified, with two columns of 3.5" width.  
+
+Sub Body_Macro()
 '
-' Macro1 Macro
+' Body_Macro Macro
 '
 '
     With Selection.PageSetup
@@ -29,6 +33,7 @@ Sub Macro1()
         .BookFoldPrintingSheets = 1
         .GutterPos = wdGutterPosLeft
     End With
+    
     With Selection.ParagraphFormat
         .LeftIndent = InchesToPoints(0)
         .RightIndent = InchesToPoints(0)
@@ -55,13 +60,16 @@ Sub Macro1()
         .TextboxTightWrap = wdTightNone
         .CollapsedByDefault = False
     End With
+    
     Selection.WholeStory
     If ActiveWindow.View.SplitSpecial <> wdPaneNone Then
         ActiveWindow.Panes(2).Close
     End If
+    
     If ActiveWindow.ActivePane.View.Type <> wdPrintView Then
         ActiveWindow.ActivePane.View.Type = wdPrintView
     End If
+    
     With ActiveDocument.PageSetup.TextColumns
         .SetCount NumColumns:=2
         .EvenlySpaced = True
@@ -69,5 +77,7 @@ Sub Macro1()
         .Width = InchesToPoints(3.5)
         .Spacing = InchesToPoints(0.24)
     End With
+    
     Selection.ParagraphFormat.Alignment = wdAlignParagraphJustify
+    
 End Sub
