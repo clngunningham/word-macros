@@ -80,5 +80,6 @@ Sub Body_Macro()
     End With
     
     Selection.ParagraphFormat.Alignment = wdAlignParagraphJustify
+    Selection.Font.Name = "Times New Roman"
     
 End Sub
