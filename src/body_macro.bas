@@ -1,4 +1,5 @@
-' This is a body macro taht follows IEEE conference style 
+' Colin Gunningham
+' This is a body macro that follows IEEE conference style 
 ' This macro automates formatting for a two column Word document.
 ' It sets the margins to be 0.75" 1", 0.63", 0.63", the spacing to be 0, 0, 0, 6, 
 ' the references to be Chicago, and the text Justified, with two columns of 3.5" width.  
